@@ -13,10 +13,9 @@ public abstract class Tweet {
     private Date date;
     private ArrayList<Mood> moodList;
 
-    public Tweet(String meesage) {
+    public Tweet(String message) {
         this.message = message;
         this.date = new Date();
-        this.moodList = new ArrayList<Mood>();
     }
 
     public Tweet(String message, Date date) {
@@ -54,4 +53,9 @@ public abstract class Tweet {
     }
 
     public abstract Boolean isImportant();
+
+    @Override
+    public String toString() {
+        return date.toString() + " | " + message;
+    }
 }
