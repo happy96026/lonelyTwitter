@@ -1,4 +1,10 @@
 /*
+ * LonelyTwitterActivity
+ *
+ * Version 1.0
+ *
+ * 28/09/2017
+ *
  * Copyright (c) 2017. Team X - CMPUT 301. University of Alberta - All rights reserved.
  * You may use , distribute or modify this code under terms and conditions of the Code of Student Behaviour at the University of Alberta.
  * You may find a copy of this license in this project.
@@ -30,6 +36,14 @@ import android.widget.ListView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * The main activity for LonelyTwitter App
+ *
+ * @author Daniel Choi
+ * @version 1.0
+ * @since 1.0
+ * @see Tweet
+ */
 public class LonelyTwitterActivity extends Activity {
 
 	private static final String FILENAME = "file.sav";
@@ -38,8 +52,12 @@ public class LonelyTwitterActivity extends Activity {
 
     private ArrayList<Tweet> tweets = new ArrayList<Tweet>();
 	private ArrayAdapter<Tweet> adapter;
-	
-	/** Called when the activity is first created. */
+
+	/**
+	 * Called when activity is first created.
+	 * Please refer to Android Document for more details.
+	 * @param savedInstanceState
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -72,6 +90,10 @@ public class LonelyTwitterActivity extends Activity {
 		});
 	}
 
+	/**
+	 * Called when the activity is becoming visible to the user.
+	 * Please refer to Android Documentation for more details.
+	 */
 	@Override
 	protected void onStart() {
 		// TODO Auto-generated method stub
@@ -82,6 +104,10 @@ public class LonelyTwitterActivity extends Activity {
 		oldTweetsList.setAdapter(adapter);
 	}
 
+	/**
+	 * Load application information from a file. The file that contains
+	 * information in JSON format is converted to Java objects.
+	 */
 	private void loadFromFile() {
 
 		try {
@@ -100,7 +126,11 @@ public class LonelyTwitterActivity extends Activity {
             throw new RuntimeException();
 		}
 	}
-	
+
+	/**
+	 * Save application information such as tweets by converting Java Objects
+	 * to JSON representation.
+	 */
 	private void saveInFile() {
 		try {
 			FileOutputStream fos = openFileOutput(FILENAME,

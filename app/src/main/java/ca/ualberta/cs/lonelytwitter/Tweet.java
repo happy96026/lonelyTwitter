@@ -20,9 +20,9 @@ import java.util.Date;
  *
  * @author Daniel Choi
  * @version 1.0
+ * @since 1.0
  * @see NormalTweet
  * @see ImportantTweet
- * @since 1.0
  */
 public abstract class Tweet {
 
@@ -118,6 +118,11 @@ public abstract class Tweet {
      */
     public abstract Boolean isImportant();
 
+    /**
+     * Represents the string of the Tweet class.
+     *
+     * @return a string that displays date and message
+     */
     @Override
     public String toString() {
         return date.toString() + " | " + message;
