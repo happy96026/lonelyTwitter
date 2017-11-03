@@ -13,5 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
-        android:text="New Activity" />
+        android:text="@string/New_Activity"/>
+    <!--Hardcoded text is changed @string resource. User does not have
+    to repeatedly hardcode the "New Activity"-->
 </RelativeLayout>

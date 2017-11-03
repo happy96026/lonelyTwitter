@@ -8,7 +8,8 @@
         android:id="@+id/oldTweetsTitle"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="My old tweets" />
+        android:text="@string/My_Old_Tweets" />
+    <!-- A string resource should be used to prevent hard coded text-->
 
     <ListView
         android:id="@+id/oldTweetsList"
@@ -24,8 +25,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello" />
-    
+
+    <!--Added input type so that it explicitly tells the input type to the user-->
     <EditText
+        android:inputType="text"
         android:id="@+id/body"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
